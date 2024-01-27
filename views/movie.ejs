@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favorite Movies</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="container mt-4">
+      <h2 class="mb-4">Top 10 Favorite Movies</h2>
+      <% if(movies && movies.length > 0) { %>
+      <div class="list-group">
+        <% movies.forEach(movie => { %>
+        <div
+          class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1"><%= movie.title %></h5>
+          </div>
+          <p class="mb-1">
+            <strong>Stars:</strong> <%= movie.stars.join(', ') %>
+          </p>
+          <small><strong>Director:</strong> <%= movie.director %></small>
+        </div>
+        <% }) %>
+      </div>
+      <% } else { %>
+      <p>No movies to display.</p>
+      <% } %>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

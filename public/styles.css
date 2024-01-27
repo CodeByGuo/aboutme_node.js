@@ -1,0 +1,13 @@
+.about-container {
+    background-color: #0079f3; /* Light gray background */
+    padding: 20px;
+    border: 1px solid #ff0000;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+.name-container{
+    background-color: black;
+}
+.row-container{
+    background-color: aquamarine;
+}
